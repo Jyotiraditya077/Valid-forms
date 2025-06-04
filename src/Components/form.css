@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    background-color: #f1f5f9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .form-container {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .form-container form {
+    background-color: #ffffff;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(224, 211, 236, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-container form input[name="password"],
+  .form-container form input[name="passwordConfirmation"],
+  .form-container form input[name="phoneNo"],
+  .form-container form select,
+  .form-container form input[name="panNo"],
+  .form-container form input[name="aadharNo"],
+  .form-container form button,
+  .form-container form .errorMsg,
+  .form-container form > button[type="button"] {
+    grid-column: span 2;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #6366f1;
+    outline: none;
+  }
+  
+  input::placeholder {
+    color: #6b7280;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #a163f1;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #733cba;
+  }
+  
+  .errorMsg {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: -6px;
+    margin-bottom: 6px;
+  }
+  
+  @media (max-width: 600px) {
+    .form-container form {
+      grid-template-columns: 1fr;
+    }
+  
+    .form-container form input,
+    .form-container form select,
+    .form-container form button,
+    .form-container form .errorMsg {
+      grid-column: span 1 !important;
+    }
+  }
